@@ -10,3 +10,8 @@ Feature: Complete the Tasks of practice automation page
     And User clicks "Option3" in checkbox example
     Then User verifies all the selected details in screen
 
+  Scenario: To perform the tasks in section two
+
+    Given User is landed in Automation practice web application
+    When User clicks "OpenWindow" button and switch to new window
+

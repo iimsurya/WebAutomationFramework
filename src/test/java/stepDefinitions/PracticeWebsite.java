@@ -1,14 +1,16 @@
 package stepDefinitions;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AutomationPracticeSectionOne;
+import pages.AutomationPracticeSectionTwo;
 
 public class PracticeWebsite {
 
     AutomationPracticeSectionOne automationPracticeSectionOne = new AutomationPracticeSectionOne();
-
+    AutomationPracticeSectionTwo automationPracticeSectionTwo = new AutomationPracticeSectionTwo();
     @Given("User is landed in Automation practice web application")
     public void user_is_landed_in_automation_practice_web_application() {
         automationPracticeSectionOne.openPracticeWebsite();
@@ -33,6 +35,15 @@ public class PracticeWebsite {
     public void user_verifies_all_the_selected_details_in_screen() {
         try {
             automationPracticeSectionOne.quitBrowser();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @When("User clicks {string} button and switch to new window")
+    public void userClicksButtonAndSwitchToNewWindow(String arg0) {
+        try {
+            automationPracticeSectionTwo.switchWindow();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
