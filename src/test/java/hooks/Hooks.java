@@ -13,9 +13,9 @@ public class Hooks {
     public void setup(){
 
         System.out.println("HOOK SETUP STARTED");
-        String browser = ConfigManager.getInstance().getBrowser();
+        String browser = System.getProperty("browser","chrome");
         WebDriver driver = WebDriverFactory.createDriver(browser);
-        DriverManager.setDriver(driver);
+        DriverManager.getDriver();
 
     }
 

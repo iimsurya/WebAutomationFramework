@@ -1,6 +1,6 @@
 Feature: Complete the Tasks of practice automation page
 
-
+  @dockRun
   Scenario: To perform the tasks in section one
 
     Given User is landed in Automation practice web application
