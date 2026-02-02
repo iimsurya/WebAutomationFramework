@@ -18,9 +18,4 @@ public class ConfigManager {
         return  instance;
     }
 
-    public String getBrowser(){
-        return "chrome";
-    }
-
-
 }
