@@ -39,7 +39,7 @@ public class Hooks {
         if(scenario.isFailed()){
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                FileUtils.copyFile(src, new File("screenshot.png"));
+                FileUtils.copyFile(src, new File(scenario.getName() + ".png"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
